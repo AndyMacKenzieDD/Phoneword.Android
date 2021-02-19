@@ -7,4 +7,26 @@
 	android:layout_height="match_parent"
 	android:minWidth="25px"
 	android:minHeight="25px">
+	<TextView
+		android:text="Enter a phone number:"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="75px" />
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="125px"
+		android:layout_marginTop="75px"
+		android:id="@+id/PhoneNumberText"
+		android:text="1-855-XAMARIN" />
+	<Button
+		android:text="Translate"
+		android:layout_marginTop="175px"
+		android:layout_width="match_parent"
+		android:layout_height="100px"
+		android:id="@+id/TranslateButton" />
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_marginTop="255px"
+		android:layout_height="100px"
+		android:id="@+id/TranslatedPhoneWord" />
 </android.support.design.widget.CoordinatorLayout>

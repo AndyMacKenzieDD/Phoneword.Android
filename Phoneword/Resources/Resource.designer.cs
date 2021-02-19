@@ -4097,6 +4097,9 @@ namespace Phoneword
 		public partial class Mipmap
 		{
 			
+			// aapt resource value: 0x7F0D0003
+			public const int Icon = 2131558403;
+			
 			// aapt resource value: 0x7F0D0000
 			public const int ic_launcher = 2131558400;
 			

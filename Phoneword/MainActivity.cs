@@ -9,7 +9,7 @@ using Android.Widget;
 
 namespace Phoneword
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -17,6 +17,26 @@ namespace Phoneword
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
+
+            EditText phoneNumberText = FindViewById<EditText>(Resource.Id.PhoneNumberText);
+            TextView translatedPhoneWord = FindViewById<TextView>(Resource.Id.TranslatedPhoneWord);
+            Button translateButton = FindViewById<Button>(Resource.Id.TranslateButton);
+
+            string translatedNumber = string.Empty;
+
+            translateButton.Click += (sender, e) =>
+            {
+                // Translate user's alphanumeric phone number to numeric
+                translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+                if (string.IsNullOrWhiteSpace(translatedNumber))
+                {
+                    translatedPhoneWord.Text = string.Empty;
+                }
+                else
+                {
+                    translatedPhoneWord.Text = translatedNumber;
+                }
+            };
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

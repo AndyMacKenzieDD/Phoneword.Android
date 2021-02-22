@@ -29,4 +29,11 @@
 		android:layout_marginTop="255px"
 		android:layout_height="100px"
 		android:id="@+id/TranslatedPhoneWord" />
+	<Button
+		android:text="@string/translationHistory"
+		android:layout_marginTop="355px"
+		android:layout_width="match_parent"
+		android:layout_height="100px"
+		android:id="@+id/TranslationHistoryButton"
+		android:enabled="false" />
 </android.support.design.widget.CoordinatorLayout>
